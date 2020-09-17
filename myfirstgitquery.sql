@@ -64,5 +64,5 @@ ALTER INDEX ALL ON [Sales].[CreditCardCL]
    REORGANIZE;
 
 -- 조각난 인덱스를 다시 작성
-ALTER INDEX [ClusteredColumnStoreIndex-20200917-135849] ON [Sales].[CreditCardnonCL]
+ALTER INDEX [ClusteredColumnStoreIndex-20200917-135849] ON [Sales].[CreditCardCL]
 REBUILD
