@@ -12,8 +12,8 @@
         , name AS IndedxName
         , A.index_id
         , avg_fragmentation_in_percent -- 논리적 조각화(인덱스에서 순서가 잘못된 페이지) 비율
-        , fragment_count               -- 인덱스의 조각(물리적으로 연속되는 리프 페이지) 수
-        , avg_fragment_size_in_pages   -- 인덱스 한 조각의 평균 페이지 수
+        --, fragment_count               -- 인덱스의 조각(물리적으로 연속되는 리프 페이지) 수
+        --, avg_fragment_size_in_pages   -- 인덱스 한 조각의 평균 페이지 수
     FROM sys.dm_db_index_physical_stats 
     (DB_ID(N'AdventureWorks2019'), OBJECT_ID(N'Person.Address'), NULL, NULL , NULL) AS A
         LEFT OUTER JOIN SYS.indexes AS B
